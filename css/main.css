@@ -46,12 +46,12 @@ a:hover {
 
 /* Globally Used */
 .show {
-	visibility: visible;
-	display: block;
-	opacity: 1;
+	visibility: visible!important;
+	display: block!important;
+	opacity: 1!important;
 }
 .remove {
-	display: none;
+	display: none!important;
 }
 .preloader {
     user-select: none;
@@ -64,7 +64,7 @@ a:hover {
     color: #fff;
     display: flex;
     align-items: center;
-    place-content: center;
+    text-align: center;
     font-family: 'Jost*';
     text-transform: uppercase;
     transition: all 1s ease-in-out;
@@ -75,6 +75,7 @@ a:hover {
     font-size: 40vw;
     font-weight: 900;
     color: #222;
+    margin-left: -100px;
     z-index: -1;
 }
 .loader-circle {
@@ -103,6 +104,7 @@ a:hover {
     position: relative;
     font-size: calc(18px + 1.5vw);
     font-weight: 100;
+    margin: 0 auto;
     letter-spacing: 2px;
 }
 .loader-text::after,
@@ -164,10 +166,11 @@ a:hover {
     left: 0;
     border-radius: 50%;
     border: 2px solid #e7524c;
-    border-top: 2px solid #fff;
+    border-top: 2px solid #111;
     animation: 1s infinite linear rotate;
 }
 .bg-music-text {
+	visibility: hidden;
     position: fixed;
     font-family: 'Jost*';
     text-align: center;
@@ -191,6 +194,7 @@ a:hover {
     display: none;
 }
 .bg-music-text.loaded {
+	visibility: visible;
     opacity: .6;
 }
 
