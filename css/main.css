@@ -1,0 +1,225 @@
+/* --------------------------------------------
+    
+    main.css : main style file
+    Project : My Portfolio
+    Author : Neon 
+    
+   -------------------------------------------- */
+
+
+html {
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #605561;
+    -webkit-text-size-adjust: none;
+    background: #fff;
+    margin: 0;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    color: #1851f1;
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+.preloader {
+    user-select: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    font-family: 'Jost*';
+    text-transform: uppercase;
+    transition: all 1s ease-in-out;
+    z-index: 222;
+}
+.loader-bg {
+    position: absolute;
+    font-size: 40vw;
+    font-weight: 900;
+    color: #222;
+    z-index: -1;
+}
+.loader-circle {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    border-top: 1px solid #555;
+    animation: 1s infinite linear rotate;
+}
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.loader-text {
+    padding: 0 2px 4px 2px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    font-size: calc(18px + 1.5vw);
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+.loader-text::after,
+.loader-text::before {
+    content: '';
+    position: absolute;
+    height: 1.1px;
+    bottom: 0;
+    left: 0;
+}
+.loader-text::before {
+    background: #fff;
+    width: 100%;
+}
+.loader-text::after {
+    background: #111;
+    width: 100%;
+    animation: 2.5s infinite linear loading;
+}
+@-webkit-keyframes loading {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Preloader Ripple Out */
+.pre-ripple {
+    position: fixed;
+    background: #111;
+    display: inline-block;
+    top: 60%;
+    left: 50%;
+    margin: -1.75rem;
+    border-radius: 50%;
+    padding: 1.6rem 2.1rem;
+    width: 5rem;
+    height: 5rem;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 1s ease-in-out;
+    border-radius: 50%;
+    box-shadow: 0px 0px 16px #111;
+    z-index: 223;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+.pre-ripple::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 2px solid #e7524c;
+    border-top: 2px solid #fff;
+    animation: 1s infinite linear rotate;
+}
+.bg-music-text {
+    position: fixed;
+    font-family: 'Jost*';
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: -20px -160px;
+    opacity: 0;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 224;
+    transition: all 500ms ease-in-out;
+    transition-delay: 1s;
+}
+.pre-ripple.loaded {
+    transform: scale(50.5);
+}
+.pre-ripple.loaded i {
+    display: none;
+}
+.bg-music-text.loaded {
+    opacity: .6;
+}
+
+/* Music Animation */
+.music-animation {
+  display: flex;
+  margin-right: 10px;
+  align-items: flex-end;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+}
+.music-bar{
+  width: 1px;
+  background-color: #fff;
+  height: 2px;
+  display: block;
+  margin: 0 1px;
+}
+.music-animation.on .music-bar {
+    animation: bar 1.2s infinite;
+}
+.music-animation.on .bar2{ 
+    animation-delay:.1s;
+}
+.music-animation.on .bar3{ 
+    animation-delay:.2s;
+}
+.music-animation.on .bar4{ 
+    animation-delay:.3s;
+}
+.music-animation.on .bar5{ animation-delay:.4s;
+}
+@-webkit-keyframes bar {
+  0% {
+    height: 4px;
+    }
+    50% {
+      height: 14px;
+    }
+    100% {
+      height: 4px;
+    }
+}
