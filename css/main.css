@@ -43,6 +43,16 @@ a:hover {
 *::before {
     box-sizing: border-box;
 }
+
+/* Globally Used */
+.show {
+	visibility: visible;
+	display: block;
+	opacity: 1;
+}
+.remove {
+	display: none;
+}
 .preloader {
     user-select: none;
     position: fixed;
@@ -128,7 +138,7 @@ a:hover {
     display: inline-block;
     top: 60%;
     left: 50%;
-    margin: -1.75rem;
+    margin: -2.75rem;
     border-radius: 50%;
     padding: 1.6rem 2.1rem;
     width: 5rem;
@@ -162,7 +172,8 @@ a:hover {
     font-family: 'Jost*';
     text-align: center;
     top: 50%;
-    left: 50%;
+    left: 0;
+    right: 0;
     margin: -20px -160px;
     opacity: 0;
     color: #fff;
@@ -170,7 +181,8 @@ a:hover {
     text-transform: uppercase;
     z-index: 224;
     transition: all 500ms ease-in-out;
-    transition-delay: 1s;
+    transition-delay: 500ms;
+    user-select: none;
 }
 .pre-ripple.loaded {
     transform: scale(50.5);
