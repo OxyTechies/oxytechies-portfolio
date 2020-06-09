@@ -246,9 +246,10 @@
         // ------------------------------
         // BG MUSIC AUTOPLAY CONFIRM
         if (autoplay) {
-            $('.pre-ripple.loaded').on('click', function () {
+            $('.pre-ripple.loaded, .bg-music-text').on('click', function () {
                 userClickedAutoplayDialog = true;
                 $('.pre-ripple').addClass('remove').removeClass('loaded');
+                $('.bg-music-text').remove();
 
                 if ($(this).hasClass('bg-music-no')) {
                     isUserTurnedOffMusic = true;
