@@ -72,7 +72,7 @@ a:hover {
 }
 .loader-bg {
     position: fixed;
-    font-size: 20vw;
+    font-size: 8vw;
     font-weight: 900;
     color: #222;
     z-index: -1;
