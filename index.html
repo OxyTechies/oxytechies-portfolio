@@ -25,11 +25,29 @@
 
     <!-- Main Stylesheet File -->
     <link href="css/main.css" rel="stylesheet">
+    <!-- Stylesheet For homepage -->
+    <link href="css/homepage.css" rel="stylesheet">
     <!-- INITIAL SCRIPTS -->
     <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 
-<body>
+<body class="homepage">
+
+	<!---/ Background /---->
+    <div class="background" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
 
 	<!---/ Preloader /--->
 	<div class="preloader" id="preloader">
@@ -44,13 +62,6 @@
 	<p class="bg-music-text">We Want Play Background Music<br>Click Anywhere to accept</p>
 	<!---/ Home Music Animation /---->
     <div id="play-music" class="autoplay">
-        <div id="music-animation" class="music-animation">
-            <span class="music-bar bar1"></span><!-- .bar1 -->
-            <span class="music-bar bar2"></span><!-- .bar2 -->
-            <span class="music-bar bar3"></span><!-- .bar3 -->
-            <span class="music-bar bar4"></span><!-- .bar4 -->
-            <span class="music-bar bar5"></span><!-- .bar5 -->
-        </div>
     </div><!---/ .music-animation /---->
 
 	<audio id="bg-music" loop="" src="audio/music2.mp3"></audio><!-- #bg-music -->
