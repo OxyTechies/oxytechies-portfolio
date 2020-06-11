@@ -1,7 +1,7 @@
 /* --------------------------------------------
     
     main.css : main style file
-    Project : My Portfolio
+    Project : OxyTechies Portfolio
     Author : Neon 
     
    -------------------------------------------- */
@@ -71,13 +71,19 @@ a:hover {
     z-index: 222;
 }
 .loader-bg {
-    position: absolute;
-    font-size: 40vw;
+    position: fixed;
+    font-size: 20vw;
     font-weight: 900;
     color: #222;
-    margin-left: -100px;
     z-index: -1;
+    white-space: nowrap;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: scale(2.0);
 }
+
+
 .loader-circle {
     position: absolute;
     top: 2%;
@@ -107,31 +113,6 @@ a:hover {
     margin: 0 auto;
     letter-spacing: 2px;
 }
-.loader-text::after,
-.loader-text::before {
-    content: '';
-    position: absolute;
-    height: 1.1px;
-    bottom: 0;
-    left: 0;
-}
-.loader-text::before {
-    background: #fff;
-    width: 100%;
-}
-.loader-text::after {
-    background: #111;
-    width: 100%;
-    animation: 2.5s infinite linear loading;
-}
-@-webkit-keyframes loading {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 /* Preloader Ripple Out */
 .pre-ripple {
@@ -140,7 +121,7 @@ a:hover {
     display: inline-block;
     top: 60%;
     left: 50%;
-    margin: -2.75rem;
+    margin-left: -2.75rem;
     border-radius: 50%;
     padding: 1.6rem 2.1rem;
     width: 5rem;
@@ -189,13 +170,14 @@ a:hover {
 }
 .pre-ripple.loaded {
     transform: scale(50.5);
+    background: #e7524c;
 }
 .pre-ripple.loaded i {
     display: none;
 }
 .bg-music-text.loaded {
 	visibility: visible;
-    opacity: .6;
+    opacity: .9;
 }
 
 /* Music Animation */
