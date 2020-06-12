@@ -52,7 +52,9 @@ canvas {
 	position: fixed;
 	bottom: 5%;
 	right: 5%;
-	padding: .5rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 50px;
 	height: 50px;
 	text-align: center;
@@ -79,4 +81,74 @@ canvas {
 	transform: rotate(120deg);
 	border-radius: 50%;
 	background: #fff;
+}
+/* Music Animation */
+#play-music {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left:34px; z-index:50;
+  opacity: 1;
+  padding: 10px;
+  transition: opacity 1.5s
+}
+.home-loaded .play-music {
+  opacity: 1; 
+}
+.music-animation {
+  display: flex;
+  margin-right: 10px;
+  align-items: flex-end;
+  position: relative;
+  top: -5px;
+}
+.music-bar{
+  width: 1px;
+  background-color: #fff;
+  height: 2px;
+  display: block;
+  margin: 0 1px;
+}
+.music-animation.on .music-bar {animation:bar 1.2s infinite;
+}
+.music-animation.on .bar2{animation-delay:.1s;
+}
+.music-animation.on .bar3{animation-delay:.2s;
+}
+.music-animation.on .bar4{animation-delay:.3s;
+}
+.music-animation.on .bar5{animation-delay:.4s;
+}
+.music-toggle{
+  position:relative;
+}
+.music-toggle a,.music-toggle a:hover {
+  font-size:10px;
+  letter-spacing:1px;
+  cursor: pointer;
+  text-transform:uppercase;
+  color:#fff!important;
+}
+.music-toggle:after {
+  content:"";
+  display:block;
+  height:1px;
+  width:0;
+  background-color:#fff;
+  position:absolute;
+  transition:.2s;
+}
+.music-toggle:hover:after {
+  width:100%;
+}
+@keyframes bar {
+  0% {
+    height:4px;
+    }
+    50% {
+      height:14px;
+    }
+    100% {
+      height:4px;
+      }
 }
