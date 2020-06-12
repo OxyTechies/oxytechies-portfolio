@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>OxiTechies | Newbie</title>
+    <title>OxyTechies | Newbie</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -55,13 +55,25 @@
 		<div class="loader-circle"></div>
 		<div class="loader-text">Loading</div>
 	</div>
+
 	<!---/ Preloader end /--->
 	<div class="pre-ripple" id="pre-ripple">
 		<i class="ion-android-volume-up"></i>
 	</div>
+
 	<p class="bg-music-text">We Want Play Background Music<br>Click Anywhere to accept</p>
 	<!---/ Home Music Animation /---->
     <div id="play-music" class="autoplay">
+        <div id="music-animation" class="music-animation">
+            <span class="music-bar bar1"></span>
+            <span class="music-bar bar2"></span>
+            <span class="music-bar bar3"></span>
+            <span class="music-bar bar4"></span>
+            <span class="music-bar bar5"></span>
+        </div><!-- #music-animation .music-animation -->
+        <div id="music-toggle" class="music-toggle">
+            <a onclick="togglePlay()" id="toggle" data-on-text="Music on" data-off-text="Music off">Music On</a><!-- #toggle -->
+        </div><!-- #music-toggle .music-toggle -->
     </div><!---/ .music-animation /---->
 
 	<audio id="bg-music" loop="" src="audio/music2.mp3"></audio><!-- #bg-music -->
