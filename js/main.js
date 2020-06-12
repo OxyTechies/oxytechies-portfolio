@@ -1,8 +1,8 @@
 /*
-    Name: neonex
+    Name: oxytechies
     Description: Responsive AJAX Enabled Template
     Version: 1.0
-    Author: neon
+    Author: Neon
 */
 
 (function ($) {
@@ -130,6 +130,7 @@
 
 
         }
+
 
         // ------------------------------
 
@@ -509,10 +510,12 @@
             }
             music.onplaying = function () {
                 isPlaying = true;
+                button.innerHTML = button.getAttribute("data-on-text");
                 document.getElementById("music-animation").classList.add('on');
             };
             music.onpause = function () {
                 isPlaying = false;
+                button.innerHTML = button.getAttribute("data-off-text");
                 document.getElementById("music-animation").classList.remove('on');
             };
 
